@@ -1,0 +1,19 @@
+{
+  "name": "drill",
+  "version": "1.0.0",
+  "description": "This is a website where users can create a fitness plan, set goals, shop, and get inspiration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alysiasaquil/drill.git"
+  },
+  "author": "Alysia Saquilabon -- alysiasaquil@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alysiasaquil/drill/issues"
+  },
+  "homepage": "https://github.com/alysiasaquil/drill#readme"
+}
