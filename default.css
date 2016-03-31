@@ -1,0 +1,15 @@
+.black {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}
+.planText {
+  width: 275px;
+}
+#panelOne,
+#panelTwo,
+#panelThree {
+  width: 350px;
+  height: 500px;
+}
