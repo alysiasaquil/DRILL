@@ -24,7 +24,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">create a plan</a></li>
+              <li><a href="" id="find">Find a Plan</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#">Log In</a></li>
@@ -38,28 +38,30 @@
         <h3>Choose one of the following plans.</h3>
       </div>
       <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-          <div class="panel panel-default" id="panelOne">
-            <div class="panel-body">
-              <div class="col-lg-4"><img src="/Users/alysiasaquil/drill/images/black.jpg" class="black">
-                <p class="planText">This program isn’t just for the true beginner who has never touched a weight before; it’s also suitable for anyone who has taken an extended leave of absence from training.</p>
-                <button type="submit" class="btn btn-default" id="panelOneButton" href="/">Get Started</button>
+        <div class="hide" id="planTypes">
+          <div class="col-lg-6 col-lg-offset-3">
+            <div class="panel panel-default" id="panelOne">
+              <div class="panel-body">
+                <div class="col-lg-4"><img src="/Users/alysiasaquil/drill/images/black.jpg" class="black">
+                  <p class="planText">This program isn’t just for the true beginner who has never touched a weight before; it’s also suitable for anyone who has taken an extended leave of absence from training.</p>
+                  <button type="submit" onclick="location.href='./home.html'" class="btn btn-default" id="panelOneButton" href="/">Get Started</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="panel panel-default" id="panelTwo">
-            <div class="panel-body">
-              <div class="col-lg-4"><img src="/Users/alysiasaquil/drill/images/black.jpg" class="black">
-                <p class="planText">Seeing new and faster gains doesn’t always require getting on a drastically different workout plan or following an ultra-scientific diet. Small changes can add up to major results. Start making the following tweaks and build muscle faster.</p>
-                <button type="submit" class="btn btn-default" id="panelTwoButton" href="/">Get Started</button>
+            <div class="panel panel-default" id="panelTwo">
+              <div class="panel-body">
+                <div class="col-lg-4"><img src="/Users/alysiasaquil/drill/images/black.jpg" class="black">
+                  <p class="planText">Seeing new and faster gains doesn’t always require getting on a drastically different workout plan or following an ultra-scientific diet. Small changes can add up to major results. Start making the following tweaks and build muscle faster.</p>
+                  <button type="submit" onclick="location.href='./home.html'" class="btn btn-default" id="panelTwoButton" href="/">Get Started</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="panel panel-default" id="panelThree">
-            <div class="panel-body">
-              <div class="col-lg-4"><img src="/Users/alysiasaquil/drill/images/black.jpg" class="black">
-                <p class="planText">You know the drill when it comes to losing weight: take in fewer calories, burn more calories. But you also know that most diets and quick weight-loss plans don't work as promised. If you're trying to drop a few pounds fast, these expert tips will make it easy for you to lose the weight quickly.</p>
-                <button type="submit" class="btn btn-default" id="panelThreeButton" href="/">Get Started</button>
+            <div class="panel panel-default" id="panelThree">
+              <div class="panel-body">
+                <div class="col-lg-4"><img src="/Users/alysiasaquil/drill/images/black.jpg" class="black">
+                  <p class="planText">You know the drill when it comes to losing weight: take in fewer calories, burn more calories. But you also know that most diets and quick weight-loss plans don't work as promised. If you're trying to drop a few pounds fast, these expert tips will make it easy for you to lose the weight quickly.</p>
+                  <button type="submit" onclick="location.href='./home.html'" class="btn btn-default" id="panelThreeButton" href="/">Get Started</button>
+                </div>
               </div>
             </div>
           </div>
@@ -67,5 +69,6 @@
       </div>
     </div>
   <script src="front.js"></script>
+  <script src="plans.js"></script>
   </body>
 </html>

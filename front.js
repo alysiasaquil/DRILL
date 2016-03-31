@@ -1,13 +1,14 @@
-var userSignIn = document.getElementById('username').value;
-var userPassword = document.getElementById('password').value;
+var userSignIn = document.getElementById('username');
+var userPassword = document.getElementById('password');
 var signInButton = document.getElementById('signIn');
+
 
 signInButton.addEventListener('click', function(event) {
   event.preventDefault();
 
   var credentials = {
-    username: userSignIn,
-    password: userPassword
+    username: userSignIn.value,
+    password: userPassword.value
   };
   var payload = JSON.stringify(credentials);
 

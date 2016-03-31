@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
 });
 
 app.post('/login', jsonParser, function(req, res) {
-  if(req.body.username === 'alysiasaquil' && req.body.password === 'password') {
+  if(req.body.username === 'Alysia.S' && req.body.password === 'password') {
     res.cookie('loggedin', 'true');
     res.json({success: true, message: 'You will be directed to homepage'});
   } else {

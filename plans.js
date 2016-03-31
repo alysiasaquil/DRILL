@@ -13,7 +13,7 @@ var workoutPlan = [
         saturday: "20-30 min cardio"
       }
     ],
-  };
+  },
   {
     plan: "Build Muscle",
     totalWeeks: "12 Weeks",
@@ -28,7 +28,7 @@ var workoutPlan = [
         saturday: "Rest"
       }
     ],
-  };
+  },
   {
     plan: "Lose Weight",
     totalWeeks: "12 Weeks",
@@ -45,3 +45,17 @@ var workoutPlan = [
     ]
   }
 ];
+var getMoving = document.getElementById('panelOne');
+var buildMuscle = document.getElementById('panelTwo');
+var loseWeight = document.getElementById('panelThree');
+var getPlanOne = document.getElementById('panelOneButton');
+var getPlanTwo = document.getElementById('panelTwoButton');
+var getPlanThree = document.getElementById('panelThreeButton');
+var findPlan = document.getElementById('find');
+var planTypes = document.getElementById('planTypes');
+
+findPlan.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  planTypes.className = "show";
+})
