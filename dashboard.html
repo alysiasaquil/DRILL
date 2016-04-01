@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Dashboard</title>
+    <link rel="stylesheet" href="/default.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   </head>
   <body>
@@ -8,40 +10,38 @@
       <div class="row">
         <nav class="navbar navbar-default">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="/">Brand</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Link</a></li>
+              <li><button type="button" href="/myplan">My Plan</button></li>
+              <li><button type="button" href="/" id="create">Create a Plan</button></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="/logout" id="logout">Logout</a></li>
             </ul>
-          </div><!-- /.navbar-collapse -->
+          </div>
         </nav>
       </div>
 
-      <div class="row" id="welcome">
-          <h1>Welcome home, Alysia.</h1>
+      <div class="show" id="welcome">
+        <div class="row">
+            <h1>Welcome home, Alysia.</h1>
+        </div>
       </div>
-      <div class="hide row" id="chooseMsg">
-        <h1>Stay fit. Stay Focused.</h1>
-        <h3>Choose one of the following plans.</h3>
+      <div class="hide" id="chooseMsg">
+        <div class="row">
+          <h1>Stay fit. Stay Focused.</h1>
+          <h3>Choose one of the following plans.</h3>
+        </div>
       </div>
       <div class="row">
         <div class="hide" id="planTypes">
           <div class="col-lg-6 col-lg-offset-3">
             <div class="panel panel-default" id="panelOne">
               <div class="panel-body">
-                <div class="col-lg-4"><img src="/Users/alysiasaquil/drill/images/black.jpg" class="black">
+                <div class="col-lg-4"><img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
                   <p class="planText">This program isn’t just for the true beginner who has never touched a weight before; it’s also suitable for anyone who has taken an extended leave of absence from training.</p>
                   <button type="submit" onclick="location.href='./home.html'" class="btn btn-default" id="panelOneButton" href="/">Get Started</button>
                 </div>
@@ -49,7 +49,7 @@
             </div>
             <div class="panel panel-default" id="panelTwo">
               <div class="panel-body">
-                <div class="col-lg-4"><img src="/Users/alysiasaquil/drill/images/black.jpg" class="black">
+                <div class="col-lg-4"><img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
                   <p class="planText">Seeing new and faster gains doesn’t always require getting on a drastically different workout plan or following an ultra-scientific diet. Small changes can add up to major results. Start making the following tweaks and build muscle faster.</p>
                   <button type="submit" onclick="location.href='./home.html'" class="btn btn-default" id="panelTwoButton" href="/">Get Started</button>
                 </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="panel panel-default" id="panelThree">
               <div class="panel-body">
-                <div class="col-lg-4"><img src="/Users/alysiasaquil/drill/images/black.jpg" class="black">
+                <div class="col-lg-4"><img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
                   <p class="planText">You know the drill when it comes to losing weight: take in fewer calories, burn more calories. But you also know that most diets and quick weight-loss plans don't work as promised. If you're trying to drop a few pounds fast, these expert tips will make it easy for you to lose the weight quickly.</p>
                   <button type="submit" onclick="location.href='./home.html'" class="btn btn-default" id="panelThreeButton" href="/">Get Started</button>
                 </div>
@@ -67,6 +67,7 @@
         </div>
       </div>
     </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="default.js"></script>
   </body>
 </html>

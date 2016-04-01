@@ -1,3 +1,13 @@
+var chooseMsg = document.getElementById('chooseMsg');
+var welcomeMsg = document.getElementById('welcome');
+var getMoving = document.getElementById('panelOne');
+var buildMuscle = document.getElementById('panelTwo');
+var loseWeight = document.getElementById('panelThree');
+var getPlanOne = document.getElementById('panelOneButton');
+var getPlanTwo = document.getElementById('panelTwoButton');
+var getPlanThree = document.getElementById('panelThreeButton');
+var createButton = document.getElementById('create');
+var planTypes = document.getElementById('planTypes');
 var login = document.getElementById('button');
 login.addEventListener('click', function(event) {
   event.preventDefault();
@@ -32,23 +42,13 @@ login.addEventListener('click', function(event) {
   })
 })
 
-var chooseMsg = document.getElementById('chooseMsg');
-var getMoving = document.getElementById('panelOne');
-var buildMuscle = document.getElementById('panelTwo');
-var loseWeight = document.getElementById('panelThree');
-var getPlanOne = document.getElementById('panelOneButton');
-var getPlanTwo = document.getElementById('panelTwoButton');
-var getPlanThree = document.getElementById('panelThreeButton');
-var findPlan = document.getElementById('find');
-var planTypes = document.getElementById('planTypes');
+createButton.addEventListener('click', function() {
 
-findPlan.addEventListener('click', function(event) {
-  event.preventDefault();
-
-  chooseMsg.className = "show row";
+  welcomeMsg.className = "hide";
+  chooseMsg.className = "show";
   planTypes.className = "show";
 })
-
-function removeDiv(divId) {
-  $("#"+divId).remove();
-}
+//
+// function removeDiv(divId) {
+//   $("#"+divId).remove();
+// }
