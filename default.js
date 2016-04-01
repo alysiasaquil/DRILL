@@ -42,12 +42,13 @@ login.addEventListener('click', function(event) {
   })
 })
 
-createButton.addEventListener('click', function() {
-
-  welcomeMsg.className = "hide";
-  chooseMsg.className = "show";
-  planTypes.className = "show";
-})
+var get moving
+// createButton.addEventListener('click', function() {
+//
+//   welcomeMsg.className = "hide";
+//   chooseMsg.className = "show";
+//   planTypes.className = "show";
+// })
 //
 // function removeDiv(divId) {
 //   $("#"+divId).remove();

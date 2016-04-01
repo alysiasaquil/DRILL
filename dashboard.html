@@ -16,7 +16,7 @@
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li><button type="button" href="/myplan">My Plan</button></li>
-              <li><button type="button" href="/" id="create">Create a Plan</button></li>
+              <li><button type="button" href="/" id="create"  onclick="removeDiv('welcome');">Create a Plan</button></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="/logout" id="logout">Logout</a></li>
@@ -31,27 +31,92 @@
         </div>
       </div>
       <div class="hide" id="chooseMsg">
-        <div class="row">
+        <div class="show">
           <h1>Stay fit. Stay Focused.</h1>
           <h3>Choose one of the following plans.</h3>
         </div>
       </div>
       <div class="row">
-        <div class="hide" id="planTypes">
+        <div class="show" id="planTypes">
           <div class="col-lg-6 col-lg-offset-3">
             <div class="panel panel-default" id="panelOne">
               <div class="panel-body">
                 <div class="col-lg-4"><img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
                   <p class="planText">This program isn’t just for the true beginner who has never touched a weight before; it’s also suitable for anyone who has taken an extended leave of absence from training.</p>
-                  <button type="submit" onclick="location.href='./home.html'" class="btn btn-default" id="panelOneButton" href="/">Get Started</button>
+                  <button type="submit" onclick="location.href='/plans'" class="btn btn-default" id="panelOneButton" href="/">Get Started</button>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="show" id="createMove">
+                <div class="col-lg-6 col-lg-offset-3">
+                  <div class="panel panel-default intro">
+                    <div class="panel-body">
+                      <h1>Introduction</h1>
+                      <p>Welcome to the workout configuration wizard. During the configuration, you must use the buttons in at the bottom of this wizard to navigate between the various options.</p>
+                      <button type="button" class="page2">Next</class>
+                    </div>
+                  </div>
+                  <div class="panel panel-default level">
+                    <div class="panel-body">
+                      <form>
+                        <h1>Training Level</h1>
+                        <input type="checkbox" value="Beginner Level">Beginner Level<br>
+                        <p>Recommended for people with very low physical activity and little or no weight training experience.</p><br><br>
+                        <input type="checkbox" value="Intermediate Level">Intermediate Level<br>
+                        <p>Recommended for people with low physical activity but some weight training experience.</p><br><br>
+                        <input type="checkbox" value="Advanced Level">Advanced Level<br>
+                        <p>Recommended for people with moderate to high physical activity who are experienced in weight training.</p><br><br>
+                        <button type="button" class="page3">Next</class>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="panel panel-default goal">
+                    <div class="panel-body">
+                      <form>
+                        <h1>Fitness Goals</h1>
+                        <input type="checkbox" value="lose">Weight Loss<br>
+                        <p>Lose Weight</p><br><br>
+                        <input type="checkbox" value="gain">Weight Gain<br>
+                        <p>Gain Muscle</p><br><br>
+                        <button type="button" class="page4">Next</class>
+                      </form>
+                  </div>
+                </div>
+                <div class="panel panel-default days">
+                  <div class="panel-body">
+                    <form>
+                      <h1>Select Days</h1>
+                      <p>Select a minimum of three days:</p>
+                      <input type="checkbox" value="sunday">Sunday<br>
+                      <input type="checkbox" value="monday">Monday<br>
+                      <input type="checkbox" value="tuesday">Tuesday<br>
+                      <input type="checkbox" value="wednesday">Wednesday<br>
+                      <input type="checkbox" value="thursday">Thursday<br>
+                      <input type="checkbox" value="friday">Friday<br>
+                      <input type="checkbox" value="saturday">Saturday<br>
+                      <button type="button" class="page5">Next</class>
+                    </form>
+                  </div>
+                </div>
+                <div class="panel panel-default summary">
+                  <div class="panel-body">
+                    <form>
+                      <h1>Review Your Selections</h1>
+                      <p>Here is a summary of your selections. Press 'Submit' to generate workout.</p>
+
+                      <button type="button" class="page5">Submit</class>
+                    </form>
+                  </div>
+                </div>
+
               </div>
             </div>
             <div class="panel panel-default" id="panelTwo">
               <div class="panel-body">
                 <div class="col-lg-4"><img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
                   <p class="planText">Seeing new and faster gains doesn’t always require getting on a drastically different workout plan or following an ultra-scientific diet. Small changes can add up to major results. Start making the following tweaks and build muscle faster.</p>
-                  <button type="submit" onclick="location.href='./home.html'" class="btn btn-default" id="panelTwoButton" href="/">Get Started</button>
+                  <button type="submit" onclick="location.href='/plans'" class="btn btn-default" id="panelTwoButton" href="/">Get Started</button>
                 </div>
               </div>
             </div>
@@ -59,7 +124,7 @@
               <div class="panel-body">
                 <div class="col-lg-4"><img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
                   <p class="planText">You know the drill when it comes to losing weight: take in fewer calories, burn more calories. But you also know that most diets and quick weight-loss plans don't work as promised. If you're trying to drop a few pounds fast, these expert tips will make it easy for you to lose the weight quickly.</p>
-                  <button type="submit" onclick="location.href='./home.html'" class="btn btn-default" id="panelThreeButton" href="/">Get Started</button>
+                  <button type="submit" onclick="location.href='/plans'" class="btn btn-default" id="panelThreeButton" href="/">Get Started</button>
                 </div>
               </div>
             </div>
