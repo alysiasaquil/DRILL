@@ -1,14 +1,15 @@
-var userSignIn = document.getElementById('username');
-var userPassword = document.getElementById('password');
-var signInButton = document.getElementById('signIn');
+var username = document.getElementById('username').value;
+var password = document.getElementById('password').value;
+var signIn = document.getElementById('signIn');
+var signInPanel = document.getElementById('signInPanel');
+var navbar = document.getElementById('navbar');
 
-
-signInButton.addEventListener('click', function(event) {
+signIn.addEventListener('click', function(event) {
   event.preventDefault();
 
   var credentials = {
-    username: userSignIn.value,
-    password: userPassword.value
+    username: username,
+    password: password
   };
   var payload = JSON.stringify(credentials);
 
@@ -29,3 +30,24 @@ signInButton.addEventListener('click', function(event) {
     }
   })
 })
+
+var chooseMsg = document.getElementById('chooseMsg');
+var getMoving = document.getElementById('panelOne');
+var buildMuscle = document.getElementById('panelTwo');
+var loseWeight = document.getElementById('panelThree');
+var getPlanOne = document.getElementById('panelOneButton');
+var getPlanTwo = document.getElementById('panelTwoButton');
+var getPlanThree = document.getElementById('panelThreeButton');
+var findPlan = document.getElementById('find');
+var planTypes = document.getElementById('planTypes');
+
+findPlan.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  chooseMsg.className = "show row";
+  planTypes.className = "show";
+})
+
+function removeDiv(divId) {
+  $("#"+divId).remove();
+}

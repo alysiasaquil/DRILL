@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/alysiasaquil/drill/issues"
   },
-  "homepage": "https://github.com/alysiasaquil/drill#readme"
+  "homepage": "https://github.com/alysiasaquil/drill#readme",
+  "dependencies": {
+    "request": "^2.69.0"
+  }
 }
