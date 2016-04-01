@@ -1,14 +1,11 @@
-var username = document.getElementById('username').value;
-var password = document.getElementById('password').value;
-var signIn = document.getElementById('signIn');
-var signInPanel = document.getElementById('signInPanel');
-var navbar = document.getElementById('navbar');
-
-signIn.addEventListener('click', function(event) {
+var login = document.getElementById('button');
+login.addEventListener('click', function(event) {
   event.preventDefault();
 
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
   var credentials = {
-    username: username,
+    email: email,
     password: password
   };
   var payload = JSON.stringify(credentials);
@@ -19,14 +16,18 @@ signIn.addEventListener('click', function(event) {
   xhr.send(payload);
 
   xhr.addEventListener('load', function() {
-    var message = document.getElementById('invalidMessage');
-    var link = document.getElementById('link');
+    var message = document.getElementById('message');
     var response = JSON.parse(xhr.responseText);
+
+    var link = document.createElement('a');
+    link.setAttribute('href', '/');
+
+    message.appendChild(link);
 
     if(response.success) {
       link.textContent = "click here to go to home page";
     } else {
-      message.textContent = "Invalid Username or password";
+      message.textContent = "Try again";
     }
   })
 })

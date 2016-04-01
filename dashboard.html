@@ -1,11 +1,7 @@
-<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DRILL</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/Users/alysiasaquil/drill/default.css">
   </head>
   <body>
     <div class="container-fluid">
@@ -18,21 +14,23 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">DRILL</a>
+            <a class="navbar-brand" href="#">Brand</a>
           </div>
+
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="/myplan">My Plan<span class="sr-only">(current)</span></a></li>
-              <li><a href="" id="find" onclick="removeDiv('welcome');">Find a Plan</a></li>
+              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Link</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/logout">Sign Out</a></li>
+              <li><a href="/logout" id="logout">Logout</a></li>
             </ul>
-          </div>
+          </div><!-- /.navbar-collapse -->
         </nav>
       </div>
+
       <div class="row" id="welcome">
-        <h1>Welcome home, Alysia.</h1>
+          <h1>Welcome home, Alysia.</h1>
       </div>
       <div class="hide row" id="chooseMsg">
         <h1>Stay fit. Stay Focused.</h1>
@@ -68,10 +66,7 @@
           </div>
         </div>
       </div>
-      <div class="row" id="myPlans">
-      </div>
     </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="front.js"></script>
+  <script src="default.js"></script>
   </body>
 </html>
