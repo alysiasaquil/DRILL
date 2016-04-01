@@ -11,5 +11,10 @@
 #panelTwo,
 #panelThree {
   width: 350px;
-  height: 500px;
+  height: 625px;
 }
+/*.admin > div {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1em;
+}*/
