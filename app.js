@@ -76,7 +76,7 @@ app.get('/logout', jsonParser, function(req, res) {
 });
 
 app.post('/login', jsonParser, function(req, res) {
-  if(req.body.email == 'alysiasaquil@gmail.com' && req.body.password === 'password') {
+  if(req.body.username == 'yes' && req.body.password === 'no') {
     res.cookie('loggedin', 'true');
     res.json({success: true, message: 'You will be directed to dashboard'});
   } else {

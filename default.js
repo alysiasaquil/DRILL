@@ -11,10 +11,10 @@ var login = document.getElementById('button');
 login.addEventListener('click', function(event) {
   event.preventDefault();
 
-  var email = document.getElementById('email').value;
+  var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
   var credentials = {
-    email: email,
+    username: username,
     password: password
   };
   var payload = JSON.stringify(credentials);
