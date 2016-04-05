@@ -33,7 +33,7 @@
       </div> <!-- end welcome message -->
       <div class="row hide" id="planTypes">
         <div class="col-lg-4"> <!-- Get Moving Plan -->
-          <div class="panel panel-default" id="panelTwo">
+          <div class="panel panel-default" id="panelOne">
             <div class="col-lg-4"><img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
               <h1>Get Moving</h1>
               <p class="planText">This program isn’t just for the true beginner who has never touched a weight before; it’s also suitable for anyone who has taken an extended leave of absence from training.</p>
@@ -48,13 +48,13 @@
               <img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
               <h1>Build Muscle</h1>
               <p class="planText">Seeing new and faster gains doesn’t always require getting on a drastically different workout plan or following an ultra-scientific diet. Small changes can add up to major results. Start making the following tweaks and build muscle faster.</p>
-              <button type="button" class="btn btn-default" id="panelOneButton">Get Started</button>
+              <button type="button" class="btn btn-default" id="panelTwoButton">Get Started</button>
             </div>
           </div>
         </div>
 
         <div class="col-lg-4"> <!-- Lose Weight Plan -->
-          <div class="panel panel-default" id="panelTwo">
+          <div class="panel panel-default" id="panelThree">
             <div class="col-lg-4"><img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
               <h1>Lose Weight</h1>
               <p class="planText">You know the drill when it comes to losing weight: take in fewer calories, burn more calories. But you also know that most diets and quick weight-loss plans don't work as promised. If you're trying to drop a few pounds fast, these expert tips will make it easy for you to lose the weight quickly.</p>
@@ -74,7 +74,7 @@
                 <button type="button" class="page2">Next</class>
               </div>
             </div>
-            <div class="panel panel-default level">
+            <div class="panel panel-default level hide">
               <div class="panel-body">
                 <form>
                   <h1>Training Level</h1>
@@ -88,7 +88,7 @@
                 </form>
               </div>
             </div>
-            <div class="panel panel-default goal">
+            <div class="panel panel-default goal hide">
               <div class="panel-body">
                 <form>
                   <h1>Fitness Goals</h1>
@@ -100,28 +100,28 @@
                 </form>
               </div>
             </div>
-            <div class="panel panel-default days">
+            <div class="panel panel-default days hide">
               <div class="panel-body">
                 <form>
                   <h1>Select Days</h1>
                   <p>Select a minimum of three days:</p>
-                  <input type="checkbox" value="sunday">Sunday<br>
-                  <input type="checkbox" value="monday">Monday<br>
-                  <input type="checkbox" value="tuesday">Tuesday<br>
-                  <input type="checkbox" value="wednesday">Wednesday<br>
-                  <input type="checkbox" value="thursday">Thursday<br>
-                  <input type="checkbox" value="friday">Friday<br>
-                  <input type="checkbox" value="saturday">Saturday<br>
-                  <button type="button" class="page5">Next</class>
+                  <input type="checkbox" value="Sunday">Sunday<br>
+                  <input type="checkbox" value="Monday">Monday<br>
+                  <input type="checkbox" value="Tuesday">Tuesday<br>
+                  <input type="checkbox" value="Wednesday">Wednesday<br>
+                  <input type="checkbox" value="Thursday">Thursday<br>
+                  <input type="checkbox" value="Friday">Friday<br>
+                  <input type="checkbox" value="Saturday">Saturday<br>
+                  <button type="button" class="page5">Generate Plan</class>
                 </form>
               </div>
             </div>
-            <div class="panel panel-default summary">
+            <div class="panel panel-default summary hide">
               <div class="panel-body">
                 <form>
                   <h1>Review Your Selections</h1>
                   <p>Here is a summary of your selections. Press 'Submit' to generate workout.</p>
-                  <button type="button" class="page5">Submit</class>
+                  <button type="button" class="submitPlan">Submit</class>
                 </form>
               </div>
             </div>
@@ -138,7 +138,7 @@
                 <button type="button" class="page2">Next</class>
               </div>
             </div>
-            <div class="panel panel-default level">
+            <div class="panel panel-default level hide">
               <div class="panel-body">
                 <form>
                   <h1>Training Level</h1>
@@ -152,7 +152,7 @@
                 </form>
               </div>
             </div>
-            <div class="panel panel-default goal">
+            <div class="panel panel-default goal hide">
               <div class="panel-body">
                 <form>
                   <h1>Fitness Goals</h1>
@@ -164,7 +164,7 @@
                 </form>
             </div>
           </div>
-          <div class="panel panel-default days">
+          <div class="panel panel-default days hide">
             <div class="panel-body">
               <form>
                 <h1>Select Days</h1>
@@ -180,7 +180,7 @@
               </form>
             </div>
           </div>
-          <div class="panel panel-default summary">
+          <div class="panel panel-default summary hide">
             <div class="panel-body">
               <form>
                 <h1>Review Your Selections</h1>
@@ -193,7 +193,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="hide" id="buildMuscle"> <!-- create a build muscle plan -->
+      <div class="hide" id="loseWeight"> <!-- create a lose weight plan -->
         <div class="col-lg-6 col-lg-offset-3">
           <div class="panel panel-default intro">
             <div class="panel-body">
@@ -202,7 +202,7 @@
               <button type="button" class="page2">Next</class>
             </div>
           </div>
-          <div class="panel panel-default level">
+          <div class="panel panel-default level hide">
             <div class="panel-body">
               <form>
                 <h1>Training Level</h1>
@@ -216,7 +216,7 @@
               </form>
             </div>
           </div>
-          <div class="panel panel-default goal">
+          <div class="panel panel-default goal hide">
             <div class="panel-body">
               <form>
                 <h1>Fitness Goals</h1>
@@ -228,7 +228,7 @@
               </form>
             </div>
           </div>
-          <div class="panel panel-default days">
+          <div class="panel panel-default days hide">
             <div class="panel-body">
               <form>
                 <h1>Select Days</h1>
@@ -244,7 +244,7 @@
               </form>
             </div>
           </div>
-          <div class="panel panel-default summary">
+          <div class="panel panel-default summary hide">
             <div class="panel-body">
               <form>
                 <h1>Review Your Selections</h1>
@@ -260,6 +260,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="default.js"></script>
   <script src="plans.js"></script>
-  <script src="getStarted.js"></script>
+  <script src="getMoving.js"></script>
+  <!-- <script src="buildMuscle.js"></script> -->
+  <script src="loseWeight.js"></script>
   </body>
 </html>

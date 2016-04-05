@@ -39,4 +39,4 @@ login.addEventListener('click', function(event) {
       message.textContent = "Try again";
     }
   })
-})
+});
