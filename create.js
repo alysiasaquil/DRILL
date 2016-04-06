@@ -30,7 +30,8 @@ var mvLevel = document.getElementsByClassName('level')[0];
 var mvGoal = document.getElementsByClassName('goal')[0];
 var mvDays = document.getElementsByClassName('days')[0];
 var mvSummary = document.getElementsByClassName('summary')[0];
-
+var levelValue = document.getElementsByName('level');
+var selected;
 getPlanOne.addEventListener('click', function() {
   var createMove = document.getElementById('getMoving');
 
@@ -42,22 +43,34 @@ getPlanOne.addEventListener('click', function() {
 });
 
 mvNext.addEventListener('click', function() {
-  mvIntro.className = "hide";
+  // mvIntro.className = "hide";
   mvLevel.className = "show";
 });
 
-mvSecondNext.addEventListener('click', function() {
-  mvLevel.className = "hide";
+mvSecondNext.addEventListener('click', function(event) {
+  event.preventDefault();
+  // mvLevel.className = "hide";
   mvGoal.className = "show";
+
+  for (var i=0; levelValue[i]; i++) {
+    if(levelValue.checked) {
+      selected = levelValue[i].value;
+      console.log(selected);
+    }
+  }
+
+
 });
 
-mvThirdNext.addEventListener('click', function() {
-  mvGoal.className = "hide";
+mvThirdNext.addEventListener('click', function(event) {
+  event.preventDefault();
+  // mvGoal.className = "hide";
   mvDays.className = "show";
 });
 
-mvGenerate.addEventListener('click', function() {
-  mvDays.className = "hide";
+mvGenerate.addEventListener('click', function(event) {
+  event.preventDefault();
+  // mvDays.className = "hide";
   mvSummary.className = "show";
 });
 
@@ -65,7 +78,7 @@ var attachSummary = document.getElementById('mvSummary');
 var mvSummaryList = document.createElement('ul');
 
 var mvWorkoutLevel = document.createElement('li');
-mvWorkoutLevel.textContent = "Workout Level: ";
+mvWorkoutLevel.textContent = "Workout Level: " + selected;
 mvWorkoutLevel.className = "list-unstyled";
 
 var mvWorkoutGoal = document.createElement('li');
