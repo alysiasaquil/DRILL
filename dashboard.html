@@ -15,7 +15,7 @@
 
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><button type="button" href="/myplan">My Plan</button></li>
+              <li><a href="/workouts.html">View Workouts</a></li>
               <li><button type="button" class="switch" href="/" id="create"  onclick="removeDiv('welcome');">Create a Plan</button></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -120,7 +120,7 @@
               <div class="panel-body">
                 <form>
                   <h1>Review Your Selections</h1>
-                  <p>Here is a summary of your selections. Press 'Submit' to generate workout.</p>
+                  <p id="mvSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
                   <button type="button" class="submitPlan">Submit</class>
                 </form>
               </div>
@@ -184,7 +184,7 @@
             <div class="panel-body">
               <form>
                 <h1>Review Your Selections</h1>
-                <p>Here is a summary of your selections. Press 'Submit' to generate workout.</p>
+                <p id="bmSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
                 <button type="button" class="page5">Submit</class>
               </form>
             </div>
@@ -248,7 +248,7 @@
             <div class="panel-body">
               <form>
                 <h1>Review Your Selections</h1>
-                <p>Here is a summary of your selections. Press 'Submit' to generate workout.</p>
+                <p id="lwSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
                 <button type="button" class="page5">Submit</class>
               </form>
             </div>
@@ -259,9 +259,6 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="default.js"></script>
-  <script src="plans.js"></script>
-  <script src="getMoving.js"></script>
-  <!-- <script src="buildMuscle.js"></script> -->
-  <script src="loseWeight.js"></script>
+  <script src="create.js"></script>
   </body>
 </html>

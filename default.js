@@ -8,6 +8,8 @@ var getPlanThree = document.getElementById('panelThreeButton');
 var createButton = document.getElementById('create');
 var planTypes = document.getElementById('planTypes');
 var login = document.getElementById('button');
+var chooseMsg = document.getElementById('chooseMsg');
+
 login.addEventListener('click', function(event) {
   event.preventDefault();
 
