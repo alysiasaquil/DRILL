@@ -23,6 +23,8 @@ app.get('/logout', jsonParser, function(req, res) {
   }
 });
 
+app.get('/workouts', jsonParser);
+
 app.post('/login', jsonParser, function(req, res) {
   if(req.body.username == 'yes' && req.body.password === 'no') {
     res.cookie('loggedin', 'true');
@@ -32,5 +34,9 @@ app.post('/login', jsonParser, function(req, res) {
   }
 })
 
+app.post('/workouts', jsonParser);
 
-app.listen(8080);
+var port = process.env.PORT || 1337;
+app.listen(port, function() {
+ console.log("listening on port " + port);
+});

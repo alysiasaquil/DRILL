@@ -7,9 +7,25 @@
 .planText {
   width: 275px;
 }
+.workout {
+  border: 2px dashed black;
+  width: 900px;
+  height: auto;
+  padding: 10px;
+  margin: auto;
+}
+.description {
+  border-bottom: 1px black dashed;
+}
 #panelOne,
 #panelTwo,
 #panelThree {
   width: 350px;
   height: 625px;
+}
+
+#create {
+  background-color: rgb(248, 248, 248);
+  border: none;
+  margin-top: 13px;
 }

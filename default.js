@@ -9,6 +9,7 @@ var createButton = document.getElementById('create');
 var planTypes = document.getElementById('planTypes');
 var login = document.getElementById('button');
 var chooseMsg = document.getElementById('chooseMsg');
+var viewWorkouts = document.getElementById('viewWorkouts');
 
 login.addEventListener('click', function(event) {
   event.preventDefault();
@@ -30,15 +31,10 @@ login.addEventListener('click', function(event) {
     var message = document.getElementById('message');
     var response = JSON.parse(xhr.responseText);
 
-    var link = document.createElement('a');
-    link.setAttribute('href', '/');
-
-    message.appendChild(link);
-
     if(response.success) {
-      link.textContent = "click here to go to home page";
+      window.location = "/";
     } else {
-      message.textContent = "Try again";
+      message.textContent = "Invalid username or password";
     }
   })
 });
