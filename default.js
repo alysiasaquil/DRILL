@@ -10,6 +10,7 @@ var planTypes = document.getElementById('planTypes');
 var login = document.getElementById('button');
 var chooseMsg = document.getElementById('chooseMsg');
 var viewWorkouts = document.getElementById('viewWorkouts');
+var myPlans = document.getElementById('myPlans');
 
 login.addEventListener('click', function(event) {
   event.preventDefault();

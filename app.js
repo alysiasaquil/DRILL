@@ -23,7 +23,13 @@ app.get('/logout', jsonParser, function(req, res) {
   }
 });
 
-app.get('/workouts', jsonParser);
+app.get('/myplans', jsonParser);
+
+app.get('/set', function(req, res) {
+  res.sendFile(__dirname + '/myPlans.html');
+  res.redirect('/myPlans');
+})
+
 
 app.post('/login', jsonParser, function(req, res) {
   if(req.body.username == 'yes' && req.body.password === 'no') {
@@ -33,8 +39,6 @@ app.post('/login', jsonParser, function(req, res) {
     res.json({success: false, message: 'Invalid login'});
   }
 })
-
-app.post('/workouts', jsonParser);
 
 var port = process.env.PORT || 1337;
 app.listen(port, function() {

@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/alysiasaquil/drill/issues"
   },
-  "homepage": "https://github.com/alysiasaquil/drill#readme"
+  "homepage": "https://github.com/alysiasaquil/drill#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "request": "^2.70.0"
+  },
+  "devDependencies": {}
 }

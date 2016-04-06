@@ -19,6 +19,7 @@
               <li><button type="button" class="switch" href="/" id="create"  onclick="removeDiv('welcome');">Create a Plan</button></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+              <li><a href="/myPlans.html" id="myPlans">My Plans</a></li>
               <li><a href="/logout" id="logout">Logout</a></li>
             </ul>
           </div>
@@ -31,6 +32,7 @@
         <h1>Stay fit. Stay Focused.</h1>
         <h3>Choose one of the following plans.</h3>
       </div> <!-- end welcome message -->
+      <p id="displayPlan"></p>
       <div class="row hide" id="planTypes">
         <div class="col-lg-4"> <!-- Get Moving Plan -->
           <div class="panel panel-default" id="panelOne">
@@ -116,7 +118,7 @@
                 <form>
                   <h1>Review Your Selections</h1>
                   <p id="mvSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
-                  <button type="submit" class="submitPlan">Submit</class>
+                  <button type="submit" class="submitPlan" id="mvSubmit">Submit</class>
                 </form>
               </div>
             </div>
