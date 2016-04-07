@@ -137,6 +137,17 @@ var bmLevel = document.getElementsByClassName('level')[1];
 var bmGoal = document.getElementsByClassName('goal')[1];
 var bmDays = document.getElementsByClassName('days')[1];
 var bmSummary = document.getElementsByClassName('summary')[1];
+var bmLevelValue = document.getElementsByName('bmLevel');
+var bmGoalValue = document.getElementsByName('bmGoal');
+var bmDaysValue = document.getElementsByName('bmDay')
+var bmAttachSummary = document.getElementById('bmSummary');
+var bmSummaryList = document.createElement('ul')
+var bmWorkoutLevel = document.createElement('li');
+var bmWorkoutGoal = document.createElement('li');
+var bmWorkoutDays = document.createElement('li');
+var bmSelectedLevel;
+var bmSelectedGoal;
+var bmSelectedDays;
 
 getPlanTwo.addEventListener('click', function() {
   var createBuild = document.getElementById('buildMuscle');
@@ -153,40 +164,51 @@ bmNext.addEventListener('click', function() {
   bmLevel.className = "show";
 })
 
-bmSecondNext.addEventListener('click', function() {
+bmSecondNext.addEventListener('click', function(event) {
+  event.preventDefault();
   bmLevel.className = "hide";
   bmGoal.className = "show";
+
+  for(var i = 0; i < bmLevelValue.length; i++) {
+    if(bmLevelValue[i].checked) {
+      bmSelectedLevel = bmLevelValue[i].value;
+    }
+  }
+  bmWorkoutLevel.textContent = "Workout Level: " + bmSelectedLevel;
+  bmWorkoutLevel.className = "list-unstyled";
+  bmSummaryList.appendChild(bmWorkoutLevel);
+  bmAttachSummary.appendChild(bmSummaryList);
 })
 
-bmThirdNext.addEventListener('click', function() {
+bmThirdNext.addEventListener('click', function(event) {
+  event.preventDefault();
   bmGoal.className = "hide";
   bmDays.className = "show";
+
+  for(var i = 0; i < bmGoalValue.length; i++) {
+    if(bmGoalValue[i].checked) {
+      bmSelectedGoal = bmGoalValue[i].value;
+    }
+  }
+  bmWorkoutGoal.textContent = "Workout Goal: " + bmSelectedGoal;
+  bmWorkoutGoal.className = "list-unstyled";
+  bmWorkoutLevel.appendChild(bmWorkoutGoal);
 })
 
-bmGenerate.addEventListener('click', function() {
+bmGenerate.addEventListener('click', function(event) {
+  event.preventDefault();
   bmDays.className = "hide";
   bmSummary.className = "show";
+
+  for(var i = 0; i < bmDaysValue.length; i++) {
+    if(bmDaysValue[i].checked) {
+      bmSelectedDays = bmDaysValue[i].value;
+    }
+  }
+  bmWorkoutDays.textContent = "Workout Days: " + bmSelectedDays;
+  bmWorkoutDays.className = "list-unstyled";
+  bmWorkoutGoal.appendChild(bmWorkoutDays);
 })
-
-var bmAttachSummary = document.getElementById('bmSummary');
-var bmSummaryList = document.createElement('ul');
-
-var bmWorkoutLevel = document.createElement('li');
-bmWorkoutLevel.textContent = "Workout Level: ";
-bmWorkoutLevel.className = "list-unstyled";
-
-var bmWorkoutGoal = document.createElement('li');
-bmWorkoutGoal.textContent = "Workout Goal: ";
-bmWorkoutGoal.className = "list-unstyled";
-
-var bmWorkoutDays = document.createElement('li');
-bmWorkoutDays.textContent = "Workout Days: ";
-bmWorkoutDays.className = "list-unstyled";
-
-bmWorkoutGoal.appendChild(bmWorkoutDays);
-bmWorkoutLevel.appendChild(bmWorkoutGoal);
-bmSummaryList.appendChild(bmWorkoutLevel);
-bmAttachSummary.appendChild(bmSummaryList);
 
 var lwNext = document.getElementsByClassName('page2')[2];
 var lwSecondNext = document.getElementsByClassName('page3')[2];
@@ -198,6 +220,18 @@ var lwLevel = document.getElementsByClassName('level')[2];
 var lwGoal = document.getElementsByClassName('goal')[2];
 var lwDays = document.getElementsByClassName('days')[2];
 var lwSummary = document.getElementsByClassName('summary')[2];
+var lwLevelValue = document.getElementsByName('lwLevel');
+var lwGoalValue = document.getElementsByName('lwGoal');
+var lwDaysValue = document.getElementsByName('lwDay');
+var lwAttachSummary = document.getElementById('lwSummary');
+var lwSummaryList = document.createElement('ul');
+var lwWorkoutLevel = document.createElement('li');
+var lwWorkoutGoal = document.createElement('li');
+var lwWorkoutDays = document.createElement('li');
+var lwSelectedLevel;
+var lwSelectedGoal;
+var lwSelectedDays;
+
 
 getPlanThree.addEventListener('click', function() {
   var createLose = document.getElementById('loseWeight');
@@ -214,37 +248,48 @@ lwNext.addEventListener('click', function() {
   lwLevel.className = "show";
 })
 
-lwSecondNext.addEventListener('click', function() {
+lwSecondNext.addEventListener('click', function(event) {
+  event.preventDefault();
   lwLevel.className = "hide";
   lwGoal.className = "show";
+
+  for(var i = 0; i < lwLevelValue.length; i++) {
+    if(lwLevelValue[i].checked) {
+      lwSelectedLevel = lwLevelValue[i].value;
+    }
+  }
+  lwWorkoutLevel.textContent = "Workout Level: " + lwSelectedLevel;
+  lwWorkoutLevel.className = "list-unstyled";
+  lwSummaryList.appendChild(lwWorkoutLevel);
+  lwAttachSummary.appendChild(lwSummaryList);
 })
 
-lwThirdNext.addEventListener('click', function() {
+lwThirdNext.addEventListener('click', function(event) {
+  event.preventDefault();
   lwGoal.className = "hide";
   lwDays.className = "show";
+
+  for(var i = 0; i < lwGoalValue.length; i++) {
+    if(lwGoalValue[i].checked) {
+      lwSelectedGoal = lwGoalValue[i].value;
+    }
+  }
+  lwWorkoutGoal.textContent = "Workout Goal: " + lwSelectedGoal;
+  lwWorkoutGoal.className = "list-unstyled";
+  lwWorkoutLevel.appendChild(lwWorkoutGoal);
 })
 
-lwGenerate.addEventListener('click', function() {
+lwGenerate.addEventListener('click', function(event) {
+  event.preventDefault();
   lwDays.className = "hide";
   lwSummary.className = "show";
+
+  for(var i = 0; i < lwDaysValue.length; i++) {
+    if(lwDaysValue[i].checked) {
+      lwSelectedDays = lwDaysValue[i].value;
+    }
+  }
+  lwWorkoutDays.textContent = "Workout Days: " + lwSelectedDays;
+  lwWorkoutDays.className = "list-unstyled";
+  lwWorkoutGoal.appendChild(lwWorkoutDays);
 })
-
-var lwAttachSummary = document.getElementById('lwSummary');
-var lwSummaryList = document.createElement('ul');
-
-var lwWorkoutLevel = document.createElement('li');
-lwWorkoutLevel.textContent = "Workout Level: ";
-lwWorkoutLevel.className = "list-unstyled";
-
-var lwWorkoutGoal = document.createElement('li');
-lwWorkoutGoal.textContent = "Workout Goal: ";
-lwWorkoutGoal.className = "list-unstyled";
-
-var lwWorkoutDays = document.createElement('li');
-lwWorkoutDays.textContent = "Workout Days: ";
-lwWorkoutDays.className = "list-unstyled";
-
-lwWorkoutGoal.appendChild(lwWorkoutDays);
-lwWorkoutLevel.appendChild(lwWorkoutGoal);
-lwSummaryList.appendChild(lwWorkoutLevel);
-lwAttachSummary.appendChild(lwSummaryList);

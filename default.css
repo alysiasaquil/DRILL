@@ -1,4 +1,10 @@
-.black {
+#background {
+  background-image: url(https://www.adidas.com/com/apps/micoach/img/top_banner.jpg) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+
+  .black {
   position: relative;
   height: 300px;
   width: 300px;
@@ -17,6 +23,35 @@
 .description {
   border-bottom: 1px black dashed;
 }
+
+.msg {
+  position: relative;
+  top: 50px;
+  z-index: 0;
+}
+
+#be,
+#find {
+  font-size: 40px;
+  color: white;
+  font-family: sans-serif;
+}
+
+#sub {
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;;
+}
+
+#loginPanel {
+  float: right;
+  right: 50px;
+  width: 300px;
+  background-color: #313c53;
+  color: #9cff00;
+  z-index: 10;
+}
+
 #panelOne,
 #panelTwo,
 #panelThree {
