@@ -111,22 +111,6 @@ mvGenerate.addEventListener('click', function(event) {
   mvWorkoutGoal.appendChild(mvWorkoutDays);
 });
 
-mvSubmit.addEventListener('click', function(event) {
-  event.preventDefault();
-
-  var one = document.createElement('p');
-  one.textContent = "Workout Level: " + selectedLevel;
-  var two = document.createElement('p');
-  two.textContent = "Workout Goal: " + selectedGoal;
-  var three = document.createElement('p');
-  three.textContent = "Workout Days: " + selectedDays;
-  mvSummary.className = "hide";
-
-  displayPlan.appendChild(one);
-  displayPlan.appendChild(two);
-  displayPlan.appendChild(three);
-})
-
 var bmNext = document.getElementsByClassName('page2')[1];
 var bmSecondNext = document.getElementsByClassName('page3')[1];
 var bmThirdNext = document.getElementsByClassName('page4')[1];
