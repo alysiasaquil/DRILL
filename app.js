@@ -8,6 +8,7 @@ var router = express.Router();
 app.use(express.static('./'));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/../images'));
+app.use(express.static(__dirname + '/../fonts'));
 
 app.get('/', function(req, res) {
   if(req.cookies.loggedin === 'true') {

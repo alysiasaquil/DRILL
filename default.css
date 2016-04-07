@@ -1,18 +1,54 @@
-#background {
-  background-image: url(https://www.adidas.com/com/apps/micoach/img/top_banner.jpg) !important;
+@font-face {
+  font-family: 'extra';
+  src: url(/fonts/SourceSansPro-ExtraLight-webfont.ttf);
+}
+
+@font-face {
+  font-family: 'pirulen';
+  src: url(/fonts/pirulen.regular.ttf);
+}
+body {
+  font-family: 'extra' !important;
+  font-size: 16px !important;
+  color: rgb(240, 240, 240) !important;
+  background-image: url(http://www.prosserfitness.ca/wp-content/themes/evolution/images/dark_backgrounds/background5.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  }
+}
+.btn-default {
+  background-color: rgb(73, 195, 93) !important;
+  border-color: rgb(73, 195, 93) !important;
+  border-radius: 0px !important;
+  color: rgb(240, 240, 240) !important;
+}
 
-  .black {
+.panel-default {
+  color: rgb(240, 240, 240);
+  background-color: #000000 !important;
+  border: 2px solid;
+  border-color: rgb(180, 180, 180);
+}
+
+.navbar {
+  border-radius: 0 !important;
+}
+.navbar-inverse {
+  color: rgb(219, 219, 219) !important;
+  background: #000000 !important;
+  text-decoration: none;
+}
+
+.black {
   position: relative;
   height: 300px;
   width: 300px;
   margin: auto;
 }
+
 .planText {
   width: 275px;
 }
+
 .workout {
   border: 2px dashed black;
   width: 900px;
@@ -20,6 +56,7 @@
   padding: 10px;
   margin: auto;
 }
+
 .description {
   border-bottom: 1px black dashed;
 }
@@ -30,7 +67,23 @@
   z-index: 0;
 }
 
-#be,
+#background {
+  background-image: url(https://www.adidas.com/com/apps/micoach/img/top_banner.jpg) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contact {
+  margin: 10px 20px 10px 20px;
+}
+#asdf {
+  font-size: 72px;
+  font-family: 'pirulen';
+}
+#brand {
+  font-size: 50px;
+  font-family: 'pirulen';
+}
 #find {
   font-size: 40px;
   color: white;
@@ -40,7 +93,7 @@
 #sub {
   font-size: 20px;
   color: white;
-  font-family: sans-serif;;
+  font-family: 'extra';
 }
 
 #loginPanel {
@@ -48,7 +101,6 @@
   right: 50px;
   width: 300px;
   background-color: #313c53;
-  color: #9cff00;
   z-index: 10;
 }
 
@@ -57,12 +109,15 @@
 #panelThree {
   width: 350px;
   height: 625px;
+  color: rgb(240, 240, 240);
+  background-color: #000000;
+  border: 2px solid;
+  border-color: rgb(180, 180, 180);
 }
-#myPlans,
-#create {
-  background-color: rgb(248, 248, 248);
-  border: none;
-  margin-top: 13px;
+
+#panelOneButton,
+#panelTwoButton,
+#panelThreeButton {
 }
 
 #displayPlan {

@@ -2,21 +2,26 @@
 <html>
   <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/default.css">
+    <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
-        <nav class="navbar navbar-default">
+        <p id="contact"><i class="fa fa-map-marker"></i> 12345 Drill Avenue, Drill City, DR  <i class="fa fa-phone"></i> 123.456.7890 <span class="pull-right">Visit us on <a href="http://facebook.com">Facebook</a></span></p>
+      </div>
+      <div class="row">
+        <nav class="navbar navbar-inverse">
+          <p class="text-center" id="brand">DRILL</p>
           <div class="navbar-header">
-            <a class="navbar-brand" href="/">Brand</a>
+            <a class="navbar-brand" href="/">Home</a>
           </div>
 
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li><a href="/workouts.html" id="viewWorkouts">View Workouts</a></li>
-              <li><button type="button" class="switch" href="/" id="create"  onclick="removeDiv('welcome');">Create a Plan</button></li>
+              <li><a class="switch" href="/" id="create"  onclick="removeDiv('welcome');">Create a Plan</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="/logout" id="logout">Logout</a></li>
@@ -25,7 +30,7 @@
         </nav>
       </div> <!-- end navbar -->
       <div class="show" id="welcome">
-        <h1>Welcome home, Alysia.</h1>
+        <h1>Welcome home, Alysia</h1>
       </div>
       <div class="hide" id="chooseMsg">
         <h1>Stay fit. Stay Focused.</h1>
@@ -58,7 +63,7 @@
           <div class="panel panel-default" id="panelThree">
             <div class="col-lg-4"><img src="https://c1.staticflickr.com/5/4034/4544827697_6f73866999_b.jpg" class="black">
               <h1>Lose Weight</h1>
-              <p class="planText">You know the drill when it comes to losing weight: take in fewer calories, burn more calories. But you also know that most diets and quick weight-loss plans don't work as promised. If you're trying to drop a few pounds fast, these expert tips will make it easy for you to lose the weight quickly.</p>
+              <p class="planText">You know the drill when it comes to losing weight: take in fewer calories, burn more calories. If you're trying to drop a few pounds fast, these expert tips will make it easy for you to lose the weight quickly.</p>
               <button type="button" class="btn btn-default" id="panelThreeButton">Get Started</button>
             </div>
           </div>
@@ -75,54 +80,69 @@
                 <button type="submit" class="page2">Next</button>
               </div>
             </div>
-            <div class="panel panel-default level hide">
-              <div class="panel-body">
-                <form>
-                  <h1>Training Level</h1>
-                  <input type="checkbox" value="Beginner Level" name="level">Beginner Level<br>
-                  <p>Recommended for people with very low physical activity and little or no weight training experience.</p><br><br>
-                  <input type="checkbox" value="Intermediate Level" name="level">Intermediate Level<br>
-                  <p>Recommended for people with low physical activity but some weight training experience.</p><br><br>
-                  <input type="checkbox" value="Advanced Level" name="level">Advanced Level<br>
-                  <p>Recommended for people with moderate to high physical activity who are experienced in weight training.</p><br><br>
-                  <button type="submit" class="page3">Next</button>
-                </form>
+            <div class="level hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Training Level</h1>
+                    <input type="checkbox" value="Beginner Level" name="level">Beginner Level<br>
+                    <p>Recommended for people with very low physical activity and little or no weight training experience.</p><br><br>
+                    <input type="checkbox" value="Intermediate Level" name="level">Intermediate Level<br>
+                    <p>Recommended for people with low physical activity but some weight training experience.</p><br><br>
+                    <input type="checkbox" value="Advanced Level" name="level">Advanced Level<br>
+                    <p>Recommended for people with moderate to high physical activity who are experienced in weight training.</p><br><br>
+                    <button type="submit" class="page3">Next</button>
+                  </form>
+                </div>
               </div>
             </div>
-            <div class="panel panel-default goal hide">
-              <div class="panel-body">
-                <form>
-                  <h1>Fitness Goals</h1>
-                  <input type="checkbox" value="Lose Weight" name="goal">Weight Loss<br>
-                  <p>Lose Weight</p><br><br>
-                  <input type="checkbox" value="Gain Muscle" name="goal">Weight Gain<br>
-                  <p>Gain Muscle</p><br><br>
-                  <button type="submit" class="page4">Next</button>
-                </form>
+            <div class="goal hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Fitness Goals</h1>
+                    <input type="checkbox" value="Lose Weight" name="goal">Weight Loss<br>
+                    <p>Lose Weight</p><br><br>
+                    <input type="checkbox" value="Gain Muscle" name="goal">Weight Gain<br>
+                    <p>Gain Muscle</p><br><br>
+                    <button type="submit" class="page4">Next</button>
+                  </form>
+                </div>
               </div>
             </div>
-            <div class="panel panel-default days hide">
-              <div class="panel-body">
-                <form>
-                  <h1>Select Days</h1>
-                  <p>Select a set of days:</p>
-                  <input type="checkbox" value="Monday, Wednesday, Friday" name="day">Monday, Wednesday, Friday<br>
-                  <input type="checkbox" value="Tuesday, Thursday, Saturday" name="day">Tuesday, Thursday, Saturday<br>
-                  <button type="submit" class="page5">Generate Plan</button>
-                </form>
+            <div class="days hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Select Days</h1>
+                    <p>Select a set of days:</p>
+                    <input type="checkbox" value="Monday, Wednesday, Friday" name="day">Monday, Wednesday, Friday<br>
+                    <input type="checkbox" value="Tuesday, Thursday, Saturday" name="day">Tuesday, Thursday, Saturday<br>
+                    <button type="submit" class="page5">Generate Plan</button>
+                  </form>
+                </div>
               </div>
             </div>
-            <div class="panel panel-default summary hide">
-              <div class="panel-body">
-                <form>
-                  <h1>Review Your Selections</h1>
-                  <p id="mvSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
-                </form>
+            <div class="summary hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Review Your Selections</h1>
+                    <p id="mvSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
+                    <div class="genResults hide">
+                      <h3>Workouts</h3>
+                      <p>Day One: Cardio, Arms, Abs</p>
+                      <p>Day Two: Cardio, Chest, Shoulders</p>
+                      <p>Day Three: Cardio, Back, Legs</p>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="hide" id="buildMuscle"> <!-- create a build muscle plan -->
           <div class="col-lg-6 col-lg-offset-3">
@@ -133,145 +153,174 @@
                 <button type="submit" class="page2">Next</button>
               </div>
             </div>
-            <div class="panel panel-default level hide">
-              <div class="panel-body">
-                <form>
-                  <h1>Training Level</h1>
-                  <input type="checkbox" value="Beginner Level" name="bmLevel">Beginner Level<br>
-                  <p>Recommended for people with very low physical activity and little or no weight training experience.</p><br><br>
-                  <input type="checkbox" value="Intermediate Level" name="bmLevel">Intermediate Level<br>
-                  <p>Recommended for people with low physical activity but some weight training experience.</p><br><br>
-                <input type="checkbox" value="Advanced Level" name="bmLevel">Advanced Level<br>
-                  <p>Recommended for people with moderate to high physical activity who are experienced in weight training.</p><br><br>
-                  <button type="submit" class="page3">Next</button>
-                </form>
+            <div class="level hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Training Level</h1>
+                    <input type="checkbox" value="Beginner Level" name="bmLevel">Beginner Level<br>
+                    <p>Recommended for people with very low physical activity and little or no weight training experience.</p><br><br>
+                    <input type="checkbox" value="Intermediate Level" name="bmLevel">Intermediate Level<br>
+                    <p>Recommended for people with low physical activity but some weight training experience.</p><br><br>
+                  <input type="checkbox" value="Advanced Level" name="bmLevel">Advanced Level<br>
+                    <p>Recommended for people with moderate to high physical activity who are experienced in weight training.</p><br><br>
+                    <button type="submit" class="page3">Next</button>
+                  </form>
+                </div>
               </div>
             </div>
-            <div class="panel panel-default goal hide">
+            <div class="goal hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Fitness Goals</h1>
+                    <input type="checkbox" value="Lose Weight" name="bmGoal">Weight Loss<br>
+                    <p>Lose Weight</p><br><br>
+                    <input type="checkbox" value="Gain Muscle" name="bmGoal">Weight Gain<br>
+                    <p>Gain Muscle</p><br><br>
+                    <button type="submit" class="page4">Next</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="days hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Select Days</h1>
+                    <p>Select a set of days:</p>
+                    <input type="checkbox" value="Monday, Wednesday, Friday" name="bmDay">Monday, Wednesday, Friday<br>
+                    <input type="checkbox" value="Tuesday, Thursday, Saturday" name="bmDay">Tuesday, Thursday, Saturday<br>
+                    <button type="submit" class="page5">Generate Plan</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="summary hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Review Your Selections</h1>
+                    <p id="bmSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
+                    <div class="genResults hide">
+                      <h3>Workouts</h3>
+                      <p>Day One: Cardio, Arms, Abs</p>
+                      <p>Day Two: Cardio, Chest, Shoulders</p>
+                      <p>Day Three: Cardio, Back, Legs</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="hide" id="loseWeight"> <!-- create a lose weight plan -->
+          <div class="col-lg-6 col-lg-offset-3">
+            <div class="panel panel-default intro">
               <div class="panel-body">
-                <form>
-                  <h1>Fitness Goals</h1>
-                  <input type="checkbox" value="Lose Weight" name="bmGoal">Weight Loss<br>
-                  <p>Lose Weight</p><br><br>
-                  <input type="checkbox" value="Gain Muscle" name="bmGoal">Weight Gain<br>
-                  <p>Gain Muscle</p><br><br>
-                  <button type="submit" class="page4">Next</button>
-                </form>
+                <h1>Introduction</h1>
+                <p>Welcome to the workout configuration wizard. During the configuration, you must use the buttons in at the bottom of this wizard to navigate between the various options.</p>
+                <button type="submit" class="page2">Next</button>
+              </div>
             </div>
-          </div>
-          <div class="panel panel-default days hide">
-            <div class="panel-body">
-              <form>
-                <h1>Select Days</h1>
-                <p>Select a set of days:</p>
-                <input type="checkbox" value="Monday, Wednesday, Friday" name="bmDay">Monday, Wednesday, Friday<br>
-                <input type="checkbox" value="Tuesday, Thursday, Saturday" name="bmDay">Tuesday, Thursday, Saturday<br>
-                <button type="submit" class="page5">Generate Plan</button>
-              </form>
+            <div class="level hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Training Level</h1>
+                    <input type="checkbox" value="Beginner Level" name="lwLevel">Beginner Level<br>
+                    <p>Recommended for people with very low physical activity and little or no weight training experience.</p><br><br>
+                    <input type="checkbox" value="Intermediate Level" name="lwLevel">Intermediate Level<br>
+                    <p>Recommended for people with low physical activity but some weight training experience.</p><br><br>
+                    <input type="checkbox" value="Advanced Level" name="lwLevel">Advanced Level<br>
+                    <p>Recommended for people with moderate to high physical activity who are experienced in weight training.</p><br><br>
+                    <button type="submit" class="page3">Next</button>
+                  </form>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="panel panel-default summary hide">
-            <div class="panel-body">
-              <form>
-                <h1>Review Your Selections</h1>
-                <p id="bmSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
-              </form>
+            <div class="goal hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Fitness Goals</h1>
+                    <input type="checkbox" value="lose" name="lwGoal">Weight Loss<br>
+                    <p>Lose Weight</p><br><br>
+                    <input type="checkbox" value="gain" name="lwGoal">Weight Gain<br>
+                    <p>Gain Muscle</p><br><br>
+                    <button type="submit" class="page4">Next</button>
+                  </form>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="hide" id="loseWeight"> <!-- create a lose weight plan -->
-        <div class="col-lg-6 col-lg-offset-3">
-          <div class="panel panel-default intro">
-            <div class="panel-body">
-              <h1>Introduction</h1>
-              <p>Welcome to the workout configuration wizard. During the configuration, you must use the buttons in at the bottom of this wizard to navigate between the various options.</p>
-              <button type="submit" class="page2">Next</button>
+            <div class="days hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Select Days</h1>
+                    <p>Select a set of days:</p>
+                    <input type="checkbox" value="Monday, Wednesday, Friday" name="lwDay">Monday, Wednesday, Friday<br>
+                    <input type="checkbox" value="Tuesday, Thursday, Saturday" name="lwDay">Tuesday, Thursday, Saturday<br>
+                    <button type="submit" class="page5">Generate Plan</button>
+                  </form>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="panel panel-default level hide">
-            <div class="panel-body">
-              <form>
-                <h1>Training Level</h1>
-                <input type="checkbox" value="Beginner Level" name="lwLevel">Beginner Level<br>
-                <p>Recommended for people with very low physical activity and little or no weight training experience.</p><br><br>
-                <input type="checkbox" value="Intermediate Level" name="lwLevel">Intermediate Level<br>
-                <p>Recommended for people with low physical activity but some weight training experience.</p><br><br>
-                <input type="checkbox" value="Advanced Level" name="lwLevel">Advanced Level<br>
-                <p>Recommended for people with moderate to high physical activity who are experienced in weight training.</p><br><br>
-                <button type="submit" class="page3">Next</button>
-              </form>
-            </div>
-          </div>
-          <div class="panel panel-default goal hide">
-            <div class="panel-body">
-              <form>
-                <h1>Fitness Goals</h1>
-                <input type="checkbox" value="lose" name="lwGoal">Weight Loss<br>
-                <p>Lose Weight</p><br><br>
-                <input type="checkbox" value="gain" name="lwGoal">Weight Gain<br>
-                <p>Gain Muscle</p><br><br>
-                <button type="submit" class="page4">Next</button>
-              </form>
-            </div>
-          </div>
-          <div class="panel panel-default days hide">
-            <div class="panel-body">
-              <form>
-                <h1>Select Days</h1>
-                <p>Select a set of days:</p>
-                <input type="checkbox" value="Monday, Wednesday, Friday" name="lwDay">Monday, Wednesday, Friday<br>
-                <input type="checkbox" value="Tuesday, Thursday, Saturday" name="lwDay">Tuesday, Thursday, Saturday<br>
-                <button type="submit" class="page5">Generate Plan</button>
-              </form>
-            </div>
-          </div>
-          <div class="panel panel-default summary hide">
-            <div class="panel-body">
-              <form>
-                <h1>Review Your Selections</h1>
-                <p id="lwSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
-              </form>
+            <div class="summary hide">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <form>
+                    <h1>Review Your Selections</h1>
+                    <p id="lwSummary">Here is a summary of your selections. Press 'Submit' to generate workout.</p>
+                    <div class="genResults hide">
+                      <h3>Workouts</h3>
+                      <p>Day One: Cardio, Arms, Abs</p>
+                      <p>Day Two: Cardio, Chest, Shoulders</p>
+                      <p>Day Three: Cardio, Back, Legs</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid" id="searchContainer">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <form class="form-inline" id="search">
-          <div class="form-group">
-            <input type="text" class="form-control" id="gym" placeholder="Search for a gym" value="gym">
-          </div>
-          <div class="form-group">
-            <label for="city" id="label"> near</label>
-            <input type="text" class="form-control" id="city" placeholder="City" value= "Irvine">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" id="state" placeholder="CA" value="CA">
-          </div>
-          <button type="submit" class="btn btn-default" id="searchButton">Search</button>
-        </form>
-      </div>
-    </div>
-  </div>
 
-  <div class="container-fluid hidden" id="searchResults">
-    <div class="row">
-      <div class="col-md-6 col-xs-12" id="mapsResults">
-      </div>
-      <div class="col-md-6 col-xs-12" id="map">
+    <div class="container-fluid" id="searchContainer">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <form class="form-inline" id="search">
+            <div class="form-group">
+              <input type="text" class="form-control" id="gym" placeholder="Search for a gym" value="gym">
+            </div>
+            <div class="form-group">
+              <label for="city" id="label"> near</label>
+              <input type="text" class="form-control" id="city" placeholder="City" value= "Irvine">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="state" placeholder="CA" value="CA">
+            </div>
+            <button type="submit" class="btn btn-default" id="searchButton">Search</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
+
+    <div class="container-fluid hidden" id="searchResults">
+      <div class="row">
+        <div class="col-md-6 col-xs-12" id="mapsResults">
+        </div>
+        <div class="col-md-6 col-xs-12" id="map">
+        </div>
+      </div>
+    </div>
   <!-- <script src="map.js"></script> -->
   <script src="default.js"></script>
   <script src="create.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJrTLr-GyuEmsRBfy61i59si0&key=AIzaSyC_4f_xZ06fhU4M8o-ZAZRYumjnFy7FtlU">
+  <!-- <script src="https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJrTLr-GyuEmsRBfy61i59si0&key=AIzaSyC_4f_xZ06fhU4M8o-ZAZRYumjnFy7FtlU"> -->
   </body>
 </html>

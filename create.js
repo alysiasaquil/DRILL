@@ -7,8 +7,12 @@ var chooseMsg = document.getElementById('chooseMsg');
 var getMoving = document.getElementById('panelOne');
 var buildMuscle = document.getElementById('panelTwo');
 var loseWeight = document.getElementById('panelThree');
+var mvGenResults = document.getElementsByClassName('genResults')[0];
+var bmGenResults = document.getElementsByClassName('genResults')[1];
+var lwGenResults = document.getElementsByClassName('genResults')[2];
 
-createButton.addEventListener('click', function() {
+createButton.addEventListener('click', function(event) {
+  event.preventDefault();
 
   chooseMsg.setAttribute('class', 'show');
   planTypes.setAttribute('class', 'show');
@@ -98,6 +102,7 @@ mvGenerate.addEventListener('click', function(event) {
   event.preventDefault();
   mvDays.className = "hide";
   mvSummary.className = "show";
+  mvGenResults.className = "show";
 
   for (var i = 0; i < daysValue.length; i++) {
     if(daysValue[i].checked) {
@@ -183,6 +188,7 @@ bmGenerate.addEventListener('click', function(event) {
   event.preventDefault();
   bmDays.className = "hide";
   bmSummary.className = "show";
+  bmGenResults.className = "show";
 
   for(var i = 0; i < bmDaysValue.length; i++) {
     if(bmDaysValue[i].checked) {
@@ -267,6 +273,7 @@ lwGenerate.addEventListener('click', function(event) {
   event.preventDefault();
   lwDays.className = "hide";
   lwSummary.className = "show";
+  lwGenResults.className = "show";
 
   for(var i = 0; i < lwDaysValue.length; i++) {
     if(lwDaysValue[i].checked) {
