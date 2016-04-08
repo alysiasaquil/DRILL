@@ -21,18 +21,20 @@
         var newData = JSON.parse(apiResponse);
         console.log(newData[0]);
 
-        var myLatLng = {lat: 33.6839, lng: -117.7947};
-        var mapDiv = document.getElementById('map');
-        var map = new google.maps.Map(mapDiv, {
-          center: {
-            lat: Number(newData[0].geometry.location.lat),
-            lng: Number(newData[0].geometry.location.lng)
-          },
-          zoom:8,
-          scrollwheel: false
-        });
+
 
         for (i = 0; i < 10; i++) {
+          var myLatLng = {lat: 33.6839, lng: -117.7947};
+          console.log(myLatLng);
+          var mapDiv = document.getElementById('map');
+          var map = new google.maps.Map(mapDiv, {
+            center: {
+              lat: Number(myLatLng.lat),
+              lng: Number(myLatLng.lng)
+            },
+            zoom:10,
+            scrollwheel: false
+          });
 
           var getAddress = newData[i].formatted_address;
           var getName = newData[i].name;
@@ -42,8 +44,8 @@
           var marker = new google.maps.Marker({
             map: map,
             position: {
-              lat: Number(newData[0].geometry.location.lat),
-              lng: Number(newData[0].geometry.location.lng)
+              lat: Number(newData[i].geometry.location.lat),
+              lng: Number(newData[i].geometry.location.lng)
             },
             title: i+1 + ': ' + getName
           });

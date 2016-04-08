@@ -10,10 +10,9 @@ var router = express.Router();
 
 var textSearch = new TextSearch(config.apiKey, config.outputFormat);
 
-router.post('/form', jsonParser, function(request, response){
+router.post('/form', jsonParser, function(request, response) {
 
   var search = request.body.gym;
-
   var parameters = {
        query: search
   };
