@@ -3,19 +3,21 @@ var getPlanTwo = document.getElementById('panelTwoButton');
 var getPlanThree = document.getElementById('panelThreeButton');
 var createButton = document.getElementById('create');
 var planTypes = document.getElementById('planTypes');
-var chooseMsg = document.getElementById('chooseMsg');
+var createMsg = document.getElementById('createMsg');
 var getMoving = document.getElementById('panelOne');
 var buildMuscle = document.getElementById('panelTwo');
 var loseWeight = document.getElementById('panelThree');
 var mvGenResults = document.getElementsByClassName('genResults')[0];
 var bmGenResults = document.getElementsByClassName('genResults')[1];
 var lwGenResults = document.getElementsByClassName('genResults')[2];
+var homePanels = document.getElementById('homePanels');
 
 createButton.addEventListener('click', function(event) {
   event.preventDefault();
 
-  chooseMsg.setAttribute('class', 'show');
+  createMsg.setAttribute('class', 'show');
   planTypes.setAttribute('class', 'show');
+  homePanels.setAttribute ('class', 'container hide');
   var welcome = document.getElementById('welcome');
 })
 
@@ -52,7 +54,7 @@ var selectedDays;
 getPlanOne.addEventListener('click', function() {
   var createMove = document.getElementById('getMoving');
 
-  chooseMsg.className = "hide";
+  createMsg.className = "hide";
   getMoving.className = "hide";
   createMove.className = "show";
   buildMuscle.className = "hide";
@@ -141,7 +143,7 @@ var bmSelectedDays;
 getPlanTwo.addEventListener('click', function() {
   var createBuild = document.getElementById('buildMuscle');
 
-  chooseMsg.className = "hide";
+  createMsg.className = "hide";
   getMoving.className = "hide";
   createBuild.className = "show";
   buildMuscle.className = "hide";
@@ -226,7 +228,7 @@ var lwSelectedDays;
 getPlanThree.addEventListener('click', function() {
   var createLose = document.getElementById('loseWeight');
 
-  chooseMsg.className = "hide";
+  createMsg.className = "hide";
   getMoving.className = "hide";
   createLose.className = "show";
   buildMuscle.className = "hide";

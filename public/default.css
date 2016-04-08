@@ -7,12 +7,21 @@
   font-family: 'pirulen';
   src: url(../fonts/pirulen.regular.ttf);
 }
+@font-face {
+  font-family: 'bold';
+  src: url(../fonts/OpenSans-CondBold.ttf);
+}
+
+@font-face {
+  font-family: 'light';
+  src: url(../fonts/OpenSans-CondLight.ttf);
+}
 
 body {
   font-family: 'extra' !important;
   font-size: 16px !important;
   color: rgb(240, 240, 240) !important;
-  background-image: url(http://www.prosserfitness.ca/wp-content/themes/evolution/images/dark_backgrounds/background5.jpg);
+  background-image: url(../img/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -33,24 +42,33 @@ button {
   color: rgb(240, 240, 240) !important;
 }
 
+/*.panel,*/
 .panel-default {
   color: rgb(240, 240, 240);
-  background-image: url(http://www.prosserfitness.ca/wp-content/themes/evolution/images/dark_backgrounds/background4.jpg) !important;
+  background-image: url(../img/panelbackground.jpg) !important;
   border: 2px solid;
   border-color: rgb(180, 180, 180);
+  border-radius: 0 !important;
+}
+
+.panel-primary {
+  background: #000 !important;
+  border-radius: 0px !important;
+  border-color: #000 !important;
 }
 
 .navbar {
+  width: 100%;
   border-radius: 0 !important;
 }
 
 .navbar-inverse {
   color: rgb(219, 219, 219) !important;
-  background-image: url(http://www.prosserfitness.ca/wp-content/themes/evolution/images/dark_backgrounds/background4.jpg) !important;
+  background-image: url(../img/panelbackground.jpg) !important;
   text-decoration: none;
 }
 
-.black {
+. {
   height: 300px;
   width: 300px;
   margin: auto;
@@ -61,7 +79,8 @@ button {
 }
 
 .workout {
-  border: 2px dashed black;
+  border: 1px solid;
+  background-image: url(../img/panelbackground.jpg) !important;
   width: 900px;
   height: auto;
   padding: 10px;
@@ -101,13 +120,17 @@ button {
   font-family: 'pirulen';
 }
 #brand {
-  font-size: 50px;
+  font-size: 72px;
   font-family: 'pirulen';
 }
 #find {
   font-size: 40px;
   color: white;
   font-family: sans-serif;
+}
+
+#panelTitle {
+  color: rgb(73, 195, 93) !important;
 }
 
 #sub {
@@ -130,10 +153,32 @@ button {
   width: 350px;
   height: 625px;
   color: rgb(240, 240, 240);
-  background-color: #000000;
+  background-image: url(../img/panelbackground.jpg) !important;
   border: 2px solid;
   border-color: rgb(180, 180, 180);
+  border-radius: 0 !important;
+}
 
+#description {
+  width: 900px;
+  margin: auto;
+  border-radius: 0;
+}
+
+#workoutsContainer {
+  margin-bottom: 100px;
+}
+
+#welcome,
+#stayFit {
+  font-family: 'light' !important;
+  font-size: 72px !important;
+}
+#chooseMsg {
+  font-size: 20px;
+}
+#searchContainer {
+  margin-top: 100px;
 }
 
 #displayPlan {
@@ -142,4 +187,8 @@ button {
 
 #map {
   height: 600px;
+}
+
+#plansContainer {
+  margin: auto;
 }

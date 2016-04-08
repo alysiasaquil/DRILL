@@ -1,26 +1,22 @@
 var express = require('express');
 var app = express();
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser')
-var post = require('./postMap.js');
-var TextSearch = require('./TextSearch.js');
+var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 var router = express.Router();
 
-app.use(express.static('../public'));
+app.use(express.static('./public'));
 app.use(cookieParser());
-app.use(express.static('../public/img'));
-app.use(express.static('../public/fonts'));
-app.use(express.static('../public/js'));
-app.use(express.static('../public/views'));
-
-app.use('/search', post.api);
+app.use(express.static('/public/img'));
+app.use(express.static('/public/fonts'));
+app.use(express.static('/public/js'));
+app.use(express.static('/public/views'));
 
 app.get('/', function(req, res) {
   if(req.cookies.loggedin === 'true') {
-  res.sendFile('dashboard.html', {root: '../public/views'});
+  res.sendFile(__dirname + '/public/views/dashboard.html');
   } else {
-    res.sendFile('home.html', {root: '../public/views'});
+    res.sendFile(__dirname + '/public/views/index.html');
   }
 });
 
@@ -32,7 +28,7 @@ app.get('/logout', jsonParser, function(req, res) {
 });
 
 app.get('/workouts', function(req, res) {
-  res.sendFile('workouts.html', {root: '../public/views'});
+  res.sendFile(__dirname + '/public/views/workouts.html');
 })
 
 
