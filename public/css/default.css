@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'extra';
+  src: url(../fonts/SourceSansPro-ExtraLight-webfont.ttf);
+}
+
+@font-face {
+  font-family: 'pirulen';
+  src: url(../fonts/pirulen.regular.ttf);
+}
+
+body {
+  font-family: 'extra' !important;
+  font-size: 16px !important;
+  color: rgb(240, 240, 240) !important;
+  background-image: url(http://www.prosserfitness.ca/wp-content/themes/evolution/images/dark_backgrounds/background5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+a:hover {
+  color: rgb(73, 195, 93) !important;
+}
+
+button {
+  background-color: rgb(73, 195, 93) !important;
+  border-color: rgb(73, 195, 93) !important;
+  border-radius: 0px !important;
+  color: rgb(240, 240, 240) !important;
+}
+
+.panel-default {
+  color: rgb(240, 240, 240);
+  background-image: url(http://www.prosserfitness.ca/wp-content/themes/evolution/images/dark_backgrounds/background4.jpg) !important;
+  border: 2px solid;
+  border-color: rgb(180, 180, 180);
+}
+
+.navbar {
+  border-radius: 0 !important;
+}
+
+.navbar-inverse {
+  color: rgb(219, 219, 219) !important;
+  background-image: url(http://www.prosserfitness.ca/wp-content/themes/evolution/images/dark_backgrounds/background4.jpg) !important;
+  text-decoration: none;
+}
+
+.black {
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}
+
+.planText {
+  width: 275px;
+}
+
+.workout {
+  border: 2px dashed black;
+  width: 900px;
+  height: auto;
+  padding: 10px;
+  margin: auto;
+}
+
+.description {
+  border-bottom: 2px black dashed;
+}
+
+.media {
+  background-color: black;
+}
+
+.msg {
+  position: relative;
+  top: 50px;
+  z-index: 0;
+}
+
+.icon-img {
+  width: 100px;
+  height: 100px;
+}
+
+#background {
+  background-image: url(https://www.adidas.com/com/apps/micoach/img/top_banner.jpg) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#contact {
+  margin: 10px 20px 10px 20px;
+}
+#homeBrand {
+  font-size: 72px;
+  font-family: 'pirulen';
+}
+#brand {
+  font-size: 50px;
+  font-family: 'pirulen';
+}
+#find {
+  font-size: 40px;
+  color: white;
+  font-family: sans-serif;
+}
+
+#sub {
+  font-size: 20px;
+  color: white;
+  font-family: 'extra';
+}
+
+#loginPanel {
+  float: right;
+  right: 50px;
+  width: 300px;
+  background-color: #313c53;
+  z-index: 10;
+}
+
+#panelOne,
+#panelTwo,
+#panelThree {
+  width: 350px;
+  height: 625px;
+  color: rgb(240, 240, 240);
+  background-color: #000000;
+  border: 2px solid;
+  border-color: rgb(180, 180, 180);
+
+}
+
+#displayPlan {
+  width: 200px;
+}
+
+#map {
+  height: 600px;
+}
