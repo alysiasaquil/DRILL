@@ -31,7 +31,7 @@ app.get('/logout', jsonParser, function(req, res) {
   }
 });
 
-app.get('/set', function(req, res) {
+app.get('/workouts', function(req, res) {
   res.sendFile('/Users/alysiasaquil/drill/public/views/workouts.html');
 })
 
