@@ -147,6 +147,16 @@ button {
   z-index: 10;
 }
 
+#createPlans {
+  margin:auto;
+}
+
+#getMoving,
+#buildMuscle,
+#loseWeight {
+  width: 900px;
+  margin: auto;
+}
 #panelOne,
 #panelTwo,
 #panelThree {
