@@ -42,7 +42,13 @@ button {
   color: rgb(240, 240, 240) !important;
 }
 
-/*.panel,*/
+footer ul li {
+  display: inline-block;
+  padding: 10px;
+  float: right;
+  font-family: 'light', sans-serif;
+}
+
 .panel-default {
   color: rgb(240, 240, 240);
   background-image: url(../img/panelbackground.jpg) !important;
@@ -105,6 +111,17 @@ button {
 .icon-img {
   width: 100px;
   height: 100px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: none;
+  border-top: rgb(219, 219, 219) 1px solid;
+  color: white;
+  text-align: center;
 }
 
 #background {
@@ -206,16 +223,6 @@ button {
 #plansContainer {
   margin: auto;
 }
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: none;
-  border-top: rgb(219, 219, 219) 1px solid;
-  color: white;
-  text-align: center;
-}
 
 #footer {
   position: relative;
@@ -228,12 +235,10 @@ button {
   color: white;
   text-align: center;
 }
-footer ul li {
-  display: inline-block;
-  padding: 10px;
-  float: right;
-  font-family: 'light', sans-serif;
-}
 
-#leftFooterText { padding: 10px; }
-#rightFooterText { padding-top: 10px; }
+#leftFooterText {
+  padding: 10px;
+}
+#rightFooterText {
+  padding-top: 10px;
+}
