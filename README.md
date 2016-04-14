@@ -4,8 +4,7 @@ This is a website where users can create a fitness plan, set goals, shop, and ge
 View a live demo here: http://alysiasaquil-drill.herokuapp.com/
 
 Username: yes
-
-Password: no
+<p>Password: no</p>
 
 **Sign In Page**
 ![Sign In] (https://raw.githubusercontent.com/alysiasaquil/drill/master/public/img/Login.png)
