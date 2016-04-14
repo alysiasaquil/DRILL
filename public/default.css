@@ -96,8 +96,9 @@ button {
 }
 
 .msg {
-  position: relative;
-  top: 50px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
   z-index: 0;
 }
 
@@ -116,7 +117,7 @@ button {
   margin: 10px 20px 10px 20px;
 }
 #homeBrand {
-  font-size: 72px;
+  font-size: 100px;
   font-family: 'pirulen';
 }
 #brand {
@@ -134,15 +135,18 @@ button {
 }
 
 #sub {
-  font-size: 20px;
+  font-size: 36px;
   color: white;
+  width: 500px;
   font-family: 'extra';
 }
 
 #loginPanel {
-  float: right;
-  right: 50px;
+  position: absolute;
+  left: 55%;
+  top: 30%;
   width: 300px;
+  padding: 5px 20px 15px 20px;
   background-color: #313c53;
   z-index: 10;
 }
@@ -202,3 +206,34 @@ button {
 #plansContainer {
   margin: auto;
 }
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: none;
+  border-top: rgb(219, 219, 219) 1px solid;
+  color: white;
+  text-align: center;
+}
+
+#footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: none;
+  border-top: rgb(219, 219, 219) 1px solid;
+  color: white;
+  text-align: center;
+}
+footer ul li {
+  display: inline-block;
+  padding: 10px;
+  float: right;
+  font-family: 'light', sans-serif;
+}
+
+#leftFooterText { padding: 10px; }
+#rightFooterText { padding-top: 10px; }
