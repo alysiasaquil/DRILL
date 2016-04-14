@@ -1,7 +1,7 @@
 # drill
 This is a website where users can create a fitness plan, view workouts, and gain inspiration.
 
-View a live demo here: http://alysiasaquil-drill.herokuapp.com/
+[Click to view a live demo of DRILL on Heroku] (http://alysiasaquil-drill.herokuapp.com/)
 
 Username: yes<br>
 Password: no
