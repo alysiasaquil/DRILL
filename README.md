@@ -1,4 +1,4 @@
-# drill
+# DRILL
 This is a website where users can create a fitness plan, view workouts, and gain inspiration.
 
 [Click to view a live demo of DRILL on Heroku] (http://alysiasaquil-drill.herokuapp.com/)
