@@ -2,6 +2,7 @@
 This is a website where users can create a fitness plan, set goals, shop, and get inspiration.
 
 View a live demo here: http://alysiasaquil-drill.herokuapp.com/
+
 Username: yes
 Password: no
 
