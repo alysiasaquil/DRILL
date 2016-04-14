@@ -1,5 +1,5 @@
 # drill
-This is a website where users can create a fitness plan, set goals, shop, and get inspiration.
+This is a website where users can create a fitness plan, view workouts, and gain inspiration.
 
 View a live demo here: http://alysiasaquil-drill.herokuapp.com/
 
